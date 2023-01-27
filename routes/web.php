@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DeveloperController;
+use App\Http\Controllers\ReportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +26,12 @@ Auth::routes();
 Route::get('/developer',[DeveloperController::class,'index'])->name('Developer');
 Route::get('/developer/create',[DeveloperController::class,'create']);
 Route::post('/developer/store',[DeveloperController::class,'store']);
+
+Route::get('/report',[ReportController::class,'index'])->name('Report');
+Route::get('/report/addReport',[ReportController::class,'addReport']);
+Route::get('/report/create',[DeveloperController::class,'create']);
+Route::post('/report/store',[ReportController::class,'store']);
+
+
+
+
