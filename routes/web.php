@@ -31,7 +31,8 @@ Route::get('/report',[ReportController::class,'index'])->name('Report');
 Route::get('/report/addReport',[ReportController::class,'addReport']);
 Route::get('/report/create',[DeveloperController::class,'create']);
 Route::post('/report/store',[ReportController::class,'store']);
-
+Route::get('/report/reportverification',[ReportController::class,'reportverification']);
+Route::get('/report/reportrejected',[ReportController::class,'reportrejected']);
 
 
 
