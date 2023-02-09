@@ -33,6 +33,7 @@ Route::get('/report/create',[DeveloperController::class,'create']);
 Route::post('/report/store',[ReportController::class,'store']);
 Route::get('/report/reportverification',[ReportController::class,'reportverification']);
 Route::get('/report/reportrejected',[ReportController::class,'reportrejected']);
-
-
+Route::get('/report/reportverified',[ReportController::class,'reportverified']);
+Route::get('/report/minggu',[ReportController::class,'minggu']);
+Route::get('/report/bulan',[ReportController::class,'bulan']);
 

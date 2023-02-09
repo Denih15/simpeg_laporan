@@ -107,8 +107,21 @@ class ReportController extends Controller
          return view('report.reportrejected',compact('laporan'));
      }
     
-
-    
+     public function reportverified()
+   {
+         $laporan = Report::all();
+         return view('report.reportverified',compact('laporan'));
+     }
+     public function minggu()
+     {
+           $laporan = Report::all();
+           return view('report.minggu',compact('laporan'));
+       }
+       public function bulan()
+       {
+             $laporan = Report::all();
+             return view('report.bulan',compact('laporan'));
+         }
     
 }
 

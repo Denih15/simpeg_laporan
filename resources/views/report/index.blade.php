@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('header')
 <h5>
-    Reports
+    Dashboard
 </h5>
 
 @endsection
@@ -12,10 +12,10 @@
 
 <div class="row">
     <div class="col-lg-12">
-        <div class="table-responsive">
+        
             <table class="table table bordered">
                 <tbody>
-                    <tr>
+                    <!-- <tr>
                         <td width="300">
                             <b>Informasi Pegawai</b>
                             </td>
@@ -34,12 +34,12 @@
                 });
             
                     }); 
-            </script></div></div></div></div>
+            </script></div></div></div></div> -->
 
-<div class="nav-tabs-custom"><ul class="nav nav-tabs pull-right ui-sortable-handle"><li><a href="#grafik" data-toggle="tab" id="gfx" act="/report/addReport"><li class="active"><a href="#laporan" data-toggle="tab">Report</a></li></ul><div class="tab-content no-padding"><div class="tab-pane active" id="laporan"><div class="row"><div class="col-lg-3 col-xs-6">
-              <div class="small-box bg-navy"><a href="/report/addReport" class="btn btn-success btn-lg pull-right btn-edit" act="/report/addReport" style="z-index: 999;position: inherit;margin: 5px;" title="Buat Laporan" alt="Buat Laporan"><i class="fa fa-plus"></i></a>
+<div class="nav-tabs-custom"><ul class="nav nav-tabs pull-right ui-sortable-handle"><li><a href="#grafik" data-toggle="tab" id="gfx" act="/report/addReport"><li class="active"><a href="#laporan" data-toggle="tab"></a></li></ul><div class="tab-content no-padding"><div class="tab-pane active" id="laporan"><div class="row"><div class="col-lg-3 col-xs-6">
+              <div class="small-box bg-navy"><a href="/report/addReport" class="btn btn-success btn-lg pull-right btn-edit" act="/report/addReport" style="z-index: 999;position: inherit;margin: 5px;" title="Buat Laporan" alt="Buat Laporan"><i class=></i></a>
               <div class="inner">
-                  <h3>0</h3>
+                  <h3>1</h3>
                   <p>Add Report</p>
                 </div>
                 <div class="icon"><i class="fa fa-book"></i></div>
@@ -50,7 +50,7 @@
             <div class="row"><div class="col-lg-3 col-xs-6">
               <div class="small-box bg-blue">
                 <div class="inner">
-                  <h3> 0 </h3>
+                  <h3>1</h3>
                   <p>Report Pending Verification</p>
                 </div>
                 <div class="icon"><i class="fa fa-archive"></i></div>
@@ -65,14 +65,14 @@
                   <p>Verified Report</p>
                 </div>
                 <div class="icon"><i class="fa fa-archive"></i></div>
-                     <a href="#" class="small-box-footer">View Report <i class="fa fa-arrow-circle-right"></i></a>
+                     <a href="/report/reportverified" class="small-box-footer">View Report <i class="fa fa-arrow-circle-right"></i></a>
               </div>
             </div>
             
             <div class="col-lg-3 col-xs-6">
               <div class="small-box bg-red">
                 <div class="inner">
-                  <h3> 0 </h3>
+                  <h3> 1 </h3>
                   <p>Report Rejected</p>
                 </div>
                 <div class="icon"><i class="fa fa-archive"></i></div>
@@ -148,7 +148,7 @@
               
 
                         </tbody>
-                        <!-- <div class="card-footer">
+                        < <div class="card-footer">
                     <div style="right: 0%">
                         <span class="badge btn-success" style="float: right">
                             <a href="/report/create" style="color: aliceblue">Create</a>
