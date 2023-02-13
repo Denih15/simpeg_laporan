@@ -12,10 +12,10 @@
     <a href="/report/reportverified" class="nav-link active">
         
         <i class="nav-icon fas fa-edit"></i>
-        <p>Laporan
-        <i class="right fas fa-angle-left"></i>
+        <p>Laporan Harian
         </p>
     </a>
+  
 <!-- <ul class="nav nav-treeview" style="display: block;">
 <li class="nav-item">
 <a href="./index.html" class="nav-link active">

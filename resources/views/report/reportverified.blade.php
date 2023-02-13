@@ -10,7 +10,8 @@
         <div class="col-md-4">
 <tbody>
 <div>
-yang bersangkutan &nbsp&nbsp&nbsp Bawahan 
+<li>
+<a href="/report/reportverified">Yang Bersangkutan</a></li>
 </div>  
 </div>
 </div>    
@@ -155,6 +156,8 @@ End Function
             
             
             
-             <br><br><a href="/home" class="small-box-footer">back </a>
+<div class="col-md-6">
+    <a href="/home" class="btn btn-danger btn-md btn-form-cancel d-noprint" type="button">Back</a>
+	</div>             
 
 @endsection
