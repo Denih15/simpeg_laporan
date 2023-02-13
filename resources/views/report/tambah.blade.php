@@ -30,7 +30,7 @@ Tambah Laporan
 <option value="1" selected="selected">Kegiatan</option>
 </select></div>
 
-<div class="form-group has-feedback"><label>Keterangan</label><textarea name="kegiatan" cols="40" rows="10" class="form-control" style="height: 250px" required=""></textarea></div>
+<div class="form-group has-feedback"><label>Laporan</label><textarea name="kegiatan" cols="40" rows="10" class="form-control" style="height: 250px" required=""></textarea></div>
 
 <div class="row form-group" id="c_selisihjam">
     <div class="col-md-4">

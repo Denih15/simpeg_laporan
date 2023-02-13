@@ -22,6 +22,7 @@ return new class extends Migration
             $table->dateTime('star_time');
             $table->dateTime('finish_time');
             $table->string('status');
+            $table->integer('employee_id');
             $table->timestamps();
         });
     }

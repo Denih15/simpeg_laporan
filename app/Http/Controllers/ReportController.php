@@ -109,18 +109,19 @@ class ReportController extends Controller
     
      public function reportverified()
    {
-         $laporan = Report::all();
-         return view('report.reportverified',compact('laporan'));
+         $laporans = Report::all();
+        //  dd($laporan);
+         return view('report.reportverified',compact('laporans'));
      }
      public function minggu()
      {
-           $laporan = Report::all();
-           return view('report.minggu',compact('laporan'));
+           $laporans = Report::all();
+           return view('report.minggu',compact('laporans'));
        }
        public function bulan()
        {
-             $laporan = Report::all();
-             return view('report.bulan',compact('laporan'));
+             $laporans = Report::all();
+             return view('report.bulan',compact('laporans'));
          }
     
 }
