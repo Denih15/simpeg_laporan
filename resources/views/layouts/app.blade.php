@@ -91,7 +91,6 @@
     </footer>
 </div>
 
-<script src="{{ mix('js/app.js') }}"></script>
 
 @stack('third_party_scripts')
 

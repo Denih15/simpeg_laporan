@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <section class="content-header">
-            <h1>Daily Performance Report Await Verification</h1>
+            <h1>Laporan Menunggu Verifikasi</h1>
            </section>
 
 <script type="text/javascript">
@@ -109,7 +109,7 @@
 
 <div class="" id="lavoran">
     <div style="padding: 20px 0"> EDDY SUPRIATNO S.Pd<br>NIP.196802211995121003</div>
-    <div class="alert">No Data Yet</div>
+    <div class="alert">Belum Ada DAta</div>
     <div style="display:none">
 </div></div></div>
 </div>

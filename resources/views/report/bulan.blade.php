@@ -361,7 +361,7 @@
                                 {{$laporan->employee->name}}
                             </td>
                             <td aria-label="Last Name : " tabindex="0">
-                                Mooney
+                                L
                             </td>
                             <td aria-label="Email : " tabindex="0">
                                 menyiapkan

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <section class="content-header">
-            <h1>Daily Performance Reports Are Rejected</h1>
+            <h1>Laporan Di Tolak</h1>
         </section>
 
 
@@ -110,7 +110,7 @@
 
 <div class="" id="lavoran">
     <div style="padding: 20px 0"> EDDY SUPRIATNO S.Pd<br>NIP.196802211995121003</div>
-    <div class="alert">No Data Yet</div><div style="display:none">
+    <div class="alert">Belum Ada Data</div><div style="display:none">
 </div></div></div>
 </div>
 </div>

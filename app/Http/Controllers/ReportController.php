@@ -123,7 +123,16 @@ class ReportController extends Controller
              $laporans = Report::all();
              return view('report.bulan',compact('laporans'));
          }
-    
+         public function pengaturan()
+         {
+               $laporans = Report::all();
+               return view('report.pengaturan',compact('laporans'));
+           }
+           public function tk()
+           {
+                 $laporans = Report::all();
+                 return view('report.tk',compact('laporans'));
+             }
 }
 
 
