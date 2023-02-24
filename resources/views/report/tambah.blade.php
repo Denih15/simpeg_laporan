@@ -274,7 +274,9 @@ Tambah Laporan
 <div class="row" id="c_output">
     <div class="col-md-6">
         <br>
-        <a href="/home"  class="btn btn-danger btn-md btn-form-cancel d-noprint" type="button">Cancel</a>
-		<a href="/report/bulan" class="btn btn-success btn-md btn-save-act pull-right d-noprint" fdprocessedid="203w3e">Save</a>
+        <button type="submit" class="btn btn-danger">Cencel</button>
+        <!-- <a href="/home"  class="btn btn-danger btn-md btn-form-cancel d-noprint" type="button">Cancel</a> -->
+        <button type="submit" class="btn btn-primary">Save</button>
+		<!-- <a href="/report/bulan" class="btn btn-success btn-md btn-save-act pull-right d-noprint" fdprocessedid="203w3e">Save</a> -->
                                           
 @endsection

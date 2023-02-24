@@ -133,6 +133,21 @@ class ReportController extends Controller
                  $laporans = Report::all();
                  return view('report.tk',compact('laporans'));
              }
+
+
+public function delete($id){
+    $laporan = Report::find($id);
+
+    $laporan->delete();
+
+    return redirect('report/delete')->with('success','Acara Sudah dihapus!');
 }
+// public function delete($id){
+//     $lapoaran = Report::find($id);
+//     $name = $laporan->name;
+//     $laporan->delete();
 
+//     return redirect('/all_guests')->with('success','Tamu Atas Nama '.$name.' Sudah dihapus!');
+// }
 
+}

@@ -39,5 +39,5 @@ Route::post('/report/pengaturan',[ReportController::class,'pengaturan']);
 Route::get('/report/pengaturan',[ReportController::class,'pengaturan']);
 Route::get('/report/tk',[ReportController::class,'tk']);
 
-
-    
+Route::post('report/delete',[ReportController::class,'delete'])->name('delete');
+// Route::post('/delete_guest/{id}',[ReportController::class,'delete_guest']);
