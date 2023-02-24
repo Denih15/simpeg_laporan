@@ -1,56 +1,5 @@
 @extends('layouts.app') @section('content')
-<div class="card-header">
-    <h3 class="card-title">
-        <b>Laporan Harian</b>
-    </h3>
-</div>
-<div class="col-lg-10" id="c_sndmsg" data-select2-id="c_sndmsg">
-    <div class="row">
-        <div class="col-md-4">
-            <tbody>
-                <div>
-                    <li>
-                        <a href="/report/reportverified">Yang Bersangkutan</a>
-                    </li>
-                </div>
-            </tbody>
-        </div>
-    </div>
-    <br /><a
-        href="/report/addReport"
-        class="btn btn-success btn-md btn-save-act"
-        fdprocessedid="203w3e"
-        ><i class="fas fa-plus"></i><span>Lapoaran</span></a
-    >
-    <!-- &nbsp<a
-        href="/report/minggu"
-        class="btn btn-success btn-md btn-save-act"
-        fdprocessedid="203w3e"
-        ><span>Minggu ini</span></a
-    > -->
-    &nbsp<a
-        href="/report/bulan"
-        class="btn btn-success btn-md btn-save-act"
-        fdprocessedid="203w3e"
-        ><span>Bulan ini</span></a
-    >
-    <div class="col-lg-10" id="c_sndmsg" data-select2-id="c_sndmsg">
-        <div class="row">
-            <div class="col-md-4">
-                <br />
-                <br />
-                <td width="300">
-                    <b>EDDY SUPRIATNO S.Pd</b>
-                    <tr>
-                        <td>NIP</td>
-                        <td>:</td>
-                        <td>196802211995121003</td>
-                    </tr>
-                </td>
-            </div>
-        </div>
-        <br />
-        <br />
+
 
         <html lang="en" class="">
             <head>
@@ -147,20 +96,7 @@
                     src="https://www.jotform.com/opt/tablesorter/addons/imagemod/imageinfo.js?v3=3.3.39203"
                 ></script>
                 <script type="text/vbscript">
-                    Function IEBinary_getByteAt(strBinary, iOffset)
-                    	IEBinary_getByteAt = AscB(MidB(strBinary, iOffset + 1, 1))
-                    End Function
-                    Function IEBinary_getBytesAt(strBinary, iOffset, iLength)
-                      Dim aBytes()
-                      ReDim aBytes(iLength - 1)
-                      For i = 0 To iLength - 1
-                       aBytes(i) = IEBinary_getByteAt(strBinary, iOffset + i)
-                      Next
-                      IEBinary_getBytesAt = aBytes
-                    End Function
-                    Function IEBinary_getLength(strBinary)
-                    	IEBinary_getLength = LenB(strBinary)
-                    End Function
+                  
                 </script>
                 <script
                     type="text/javascript"
@@ -178,8 +114,7 @@
                     .fancybox-margin {
                         margin-right: 0px;
                     }
-                </style>
-            </head>
+                </style> </head>
             <body>
                 <table
                     id="data-table"
@@ -401,13 +336,6 @@
     </div>
 </div>
 
-<div class="col-md-6">
-    <a
-        href="/home"
-        class="btn btn-danger btn-md btn-form-cancel d-noprint"
-        type="button"
-        >Back</a
-    >
-</div>
+
 
 @endsection

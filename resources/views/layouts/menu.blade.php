@@ -9,7 +9,13 @@
     </a>
     <ul class="nav nav-treeview">
       <li class="nav-item">
-        <a href="/report/pengaturan" class="nav-link active">
+        <a href="/home" class="nav-link ">
+          <i class="far fa-circle nav-icon"></i>
+          <p>Menu</p>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/report/pengaturan" class="nav-link ">
           <i class="far fa-circle nav-icon"></i>
           <p>Pengaturan</p>
         </a>
@@ -22,6 +28,37 @@
       </li>
     </ul>
   </li>
+  <li class="nav-item ">
+    <a href="/report/reportverified" class="nav-link active ">
+      <i class="nav-icon fas fa-edit"></i>
+      <p>
+        laporan harian
+        <i class=""></i>
+      </p>
+    </a>
+  </li>
+  <li class="nav-item menu-open">
+    <a href="/home" class="nav-link active">
+      <i class="nav-icon fas fa-file"></i>
+      <p>
+        laporan
+        <i class="right fas fa-angle-left"></i>
+      </p>
+    </a>
+    <ul class="nav nav-treeview">
+      <li class="nav-item">
+        <a href="/report/bulan" class="nav-link ">
+          <i class="far fa-circle nav-icon"></i>
+          <p>Bulanan SKP</p>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/report/reportverified" class="nav-link ">
+          <i class="far fa-circle nav-icon"></i>
+          <p>WKE</p>
+        </a>
+        </li>
+    
   <!-- <li class="nav-item">
     <a href="#" class="nav-link">
       <i class="nav-icon fas fa-th"></i>
@@ -67,7 +104,8 @@
         <p>Target Kinerja</p>
     </a> -->
     <!-- <a href="{{ route('home') }}" class="nav-link {{ Request::is('home') ? 'active' : '' }}"> -->
-</li>
+
+<!-- </li>
 <li class="nav-item">
     <a href="/report/reportverified" class="nav-link">
         <i class="nav-icon fas fa-edit"></i>
@@ -82,4 +120,4 @@
        
         <p>Laporan</p>
     </a>
-</li> 
+</li>  -->
