@@ -15,14 +15,11 @@ return new class extends Migration
     {
         Schema::create('reports', function (Blueprint $table) {
             $table->id();
-            $table->string('location');
-            $table->date('date');
-            $table->string('activity');
-            $table->string('photo');
-            $table->dateTime('star_time');
-            $table->dateTime('finish_time');
-            $table->string('status');
-            $table->integer('employee_id');
+            $table->date('tanggal');
+            $table->string('jenis');
+            $table->string('kegiatan_tugas_jabatan');
+            $table->time('mulai');
+            $table->time('selesai');
             $table->timestamps();
         });
     }

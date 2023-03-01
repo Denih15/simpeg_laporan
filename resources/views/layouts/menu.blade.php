@@ -1,6 +1,6 @@
 
 <li class="nav-item menu-open">
-    <a href="/home" class="nav-link active">
+    <a href="/home" class="nav-link ">
       <i class="nav-icon fas fa-tachometer-alt"></i>
       <p>
         Dashboard
@@ -29,7 +29,7 @@
     </ul>
   </li>
   <li class="nav-item ">
-    <a href="/report/reportverified" class="nav-link active ">
+    <a href="/report/reportverified" class="nav-link  ">
       <i class="nav-icon fas fa-edit"></i>
       <p>
         laporan harian
@@ -38,7 +38,7 @@
     </a>
   </li>
   <li class="nav-item menu-open">
-    <a href="/home" class="nav-link active">
+    <a href="/home" class="nav-link ">
       <i class="nav-icon fas fa-file"></i>
       <p>
         laporan

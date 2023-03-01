@@ -91,9 +91,21 @@ class ReportController extends Controller
  {
        $laporan = Report::all();
        return view('report.tambah',compact('laporan'));
+
    }
  
-
+   public function tambahLaporan(Request $request){
+    // dd($request);
+    Report::create([
+        'tanggal' => $request->kapan,
+        'jenis' => $request->jenis,
+        'kegiatan_tugas_jabatan' => $request->kegiatan,
+        'mulai' => $request->mulai,
+        'selesai' => $request->selesai,
+    ]);
+    // return $this->getAllEvents();
+    return redirect('/report/bulan')->with('success','laporan ditambahkan!');
+   }
    public function reportverification()
  {
        $laporan = Report::all();

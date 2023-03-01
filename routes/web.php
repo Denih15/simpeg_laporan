@@ -40,4 +40,8 @@ Route::get('/report/pengaturan',[ReportController::class,'pengaturan']);
 Route::get('/report/tk',[ReportController::class,'tk']);
 
 Route::post('report/delete',[ReportController::class,'delete'])->name('delete');
+
+Route::post('/addReport',[ReportController::class,'tambahLaporan'])->name('addReport');
 // Route::post('/delete_guest/{id}',[ReportController::class,'delete_guest']);
+
+

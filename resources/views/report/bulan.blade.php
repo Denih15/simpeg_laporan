@@ -176,42 +176,8 @@
                                 aria-label="Last Name: No sort applied, activate to apply an ascending sort"
                                 style="user-select: none"
                             >
-                                <div class="tablesorter-header-inner">
-                                    Jenis
-                                </div>
-                            </th>
-                            <th
-                                nowrap=""
-                                data-column="3"
-                                class="tablesorter-header tablesorter-headerAsc"
-                                tabindex="0"
-                                scope="col"
-                                role="columnheader"
-                                aria-disabled="false"
-                                aria-controls="data-table"
-                                unselectable="on"
-                                aria-sort="ascending"
-                                aria-label="Email: Ascending sort applied, activate to apply a descending sort"
-                                style="user-select: none"
-                            >
-                                <div class="tablesorter-header-inner">
-                                    kegiatan tugas jabatan
-                                </div>
-                            </th>
-                            <th
-                                nowrap=""
-                                data-column="4"
-                                class="tablesorter-header tablesorter-headerUnSorted"
-                                tabindex="0"
-                                scope="col"
-                                role="columnheader"
-                                aria-disabled="false"
-                                aria-controls="data-table"
-                                unselectable="on"
-                                aria-sort="none"
-                                aria-label="Phone Number: No sort applied, activate to apply an ascending sort"
-                                style="user-select: none"
-                            >
+                           
+                         
                                 <div class="tablesorter-header-inner">
                                     Keterengan
                                 </div>
@@ -266,24 +232,7 @@
                                 aria-label="Comments: No sort applied, activate to apply an ascending sort"
                                 style="user-select: none"
                             >
-                                <div class="tablesorter-header-inner">
-                                    lama pengerjaan
-                                </div>
-                            </th>
-                            <th
-                                nowrap=""
-                                data-column="8"
-                                class="tablesorter-header tablesorter-headerUnSorted"
-                                tabindex="0"
-                                scope="col"
-                                role="columnheader"
-                                aria-disabled="false"
-                                aria-controls="data-table"
-                                unselectable="on"
-                                aria-sort="none"
-                                aria-label="File Upload: No sort applied, activate to apply an ascending sort"
-                                style="user-select: none"
-                            >
+                         
                                 <div class="tablesorter-header-inner">aksi</div>
                             </th>
                         </tr>
@@ -292,39 +241,19 @@
                         @foreach($laporans as $laporan)
                         <tr class="odd">
                             <td>1</td>
-                            <td aria-label="First Name : " tabindex="0">
-                                {{$laporan->employee->name}}
-                            </td>
-                            <td aria-label="Last Name : " tabindex="0">
-                                L
-                            </td>
-                            <td aria-label="Email : " tabindex="0">
-                                menyiapkan
-                            </td>
-                            <td aria-label="Phone Number : " tabindex="0">
-                                (946) 555-7134
-                            </td>
-                            <td aria-label="Address : " tabindex="0">
-                                74 North Old Street
-                            </td>
-                            <td aria-label="City : " tabindex="0">
-                                Violet City
-                            </td>
-                            <td aria-label="Comments : " tabindex="0">
-                                Expedita sunt enim ut sunt veniam aliquid
-                                cupidit
-                            </td>
+                            <td>{{$laporan->tanggal}}</td>
+                            <td>{{$laporan->kegiatan_tugas_jabatan}}</td>
+                            <td>{{$laporan->mulai}}</td>
+                            <td>{{$laporan->selesai}}</td>
                             <td>
                                 <span class="badge badge-warning">
                                     <a href="" style="color: aliceblue"
-                                        >Edit Role</a
-                                    >
+                                        >Edit Role</a >
                                 </span>
 
                                 <span class="badge badge-danger">
                                     <a href="" style="color: aliceblue"
-                                        >Delete Role</a
-                                    >
+                                        >Delete Role</a>
                                 </span>
                             </td>
                         </tr>
