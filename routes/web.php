@@ -40,7 +40,7 @@ Route::get('/report/pengaturan',[ReportController::class,'pengaturan']);
 Route::get('/report/tk',[ReportController::class,'tk']);
 Route::get('/edit/{id}',[ReportController::class,'update']);
 Route::post('/update_report/{id}',[ReportController::class,'save_update']);
-Route::post('delete/{id}',[ReportController::class,'remove']);
+Route::post('delete/{id}',[ReportController::class,'delete']);
 
 Route::post('/addReport',[ReportController::class,'tambahLaporan'])->name('addReport');
 // Route::post('/delete_guest/{id}',[ReportController::class,'delete_guest']);

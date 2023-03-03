@@ -166,11 +166,9 @@ class ReportController extends Controller
              }
            
             public function delete($id){
-                $features = Feature::find($id);
+                $features = report::find($id)->delete();
         
-                $features->delete();
-        
-                return redirect('bulan')->with('success','Acara Sudah dihapus!');
+                return redirect('report/bulan')->with('success','Acara Sudah dihapus!');
             }
             public function delete_report($id){
                 $laporans = Report::find($id);
