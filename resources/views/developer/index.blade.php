@@ -40,11 +40,11 @@
                                 </td>
                                 <td>
                                     <span class="badge badge-warning">
-                                        <a href="/developer/edit/{{$role->id}}" style="color: aliceblue">Edit Role</a>
+                                        <a href="/developer/edit/{{$role->id}}" style="color: aliceblue">Edit</a>
                                     </span>
     
                                     <span class="badge badge-danger">
-                                        <a href="" style="color:aliceblue">Delete Role</a>
+                                        <a href="" style="color:aliceblue">Delete</a>
                                     </span>
                                 </td>
                                 

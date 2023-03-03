@@ -51,7 +51,7 @@
                                             selected="selected"
                                             data-select2-id="3"
                                         >
-                                            Dra PETRIATI
+                                            MUHAMMAD SHODIQ
                                             (NIP.196204081990032010) Guru Madya
                                         </option>
                                     </select>
@@ -79,7 +79,7 @@
                                             selected="selected"
                                             data-select2-id="6"
                                         >
-                                            YANTRI, S.Pd, M.Pd
+                                            EDDY SUPRTIATNO, S.Pd, M.Pd
                                             (NIP.197005032006042008) KEPALA
                                             BIDANG PEMBINAAN KETENAGAAN DAN
                                             PENGELOLA DATA PENDIDIKAN

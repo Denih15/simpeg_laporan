@@ -1,6 +1,21 @@
 @extends('layouts.app') @section('content')
 
-
+<section class="content-header">
+            <h1> Laporan SKP per OPD </h1>
+            <table width="100%" id="head_rpt">
+                <tbody>
+                    <tr>
+                        <th width="100" style="text-align:left" valign="top">INSTANSI</th>
+                        <th width="10">:</th>
+                        <td valign="top">SMAN 1 MENTHOBI RAYA</td>
+                    </tr>
+                    <tr>
+                        <th style="text-align:left">BULAN</th>
+                        <th>:</th>
+                        <td>Maret 2023</td>
+                    </tr>
+                </tbody>
+            </table> 
         <html lang="en" class="">
             <head>
                 <meta name="robots" content="noindex, nofollow" />
@@ -238,25 +253,33 @@
                         </tr>
                     </thead>
                     <tbody aria-live="polite" aria-relevant="all">
+                    @php
+            $no = 1;
+            @endphp
                         @foreach($laporans as $laporan)
                         <tr class="odd">
-                            <td>1</td>
+                            <td>{{$no}}</td>
                             <td>{{$laporan->tanggal}}</td>
                             <td>{{$laporan->kegiatan_tugas_jabatan}}</td>
                             <td>{{$laporan->mulai}}</td>
                             <td>{{$laporan->selesai}}</td>
                             <td>
-                                <span class="badge badge-warning">
-                                    <a href="" style="color: aliceblue"
-                                        >Edit Role</a >
-                                </span>
-
-                                <span class="badge badge-danger">
-                                    <a href="" style="color: aliceblue"
-                                        >Delete Role</a>
+                            <span class="badge text-bg-warning">
+                        <a href="/edit/{{$laporan->id}}" style="text-decoration: none; color:black">Edit</a>
+                    </span>
+                  
+                    <form action="/delete/{{$laporan->id}}" method="post">
+                        @csrf
+                        <button type="submit" class="badge text-bg-danger">
+                            Delete
+                                    </form>
                                 </span>
                             </td>
-                        </tr>
+                        </tr> 
+                        @php
+            $no++;
+            @endphp
+
                         @endforeach
                     </tbody>
                 </table>

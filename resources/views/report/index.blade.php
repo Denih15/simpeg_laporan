@@ -56,7 +56,7 @@ $(document).ready(function(){
               <tr>
                 <td>Nama</td>
                 <td>:</td>
-                <td>FIRDAUS S.Pd</td>
+                <td>ALEX BAYU PRATAMA PUTRA S.Pd</td>
                 </tr>
                 <tr>
                   <td>NIP</td>

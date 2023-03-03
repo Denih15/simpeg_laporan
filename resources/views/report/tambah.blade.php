@@ -27,7 +27,7 @@
                                             <tr>
                                                 <td>NAMA</td>
                                                 <td>:</td>
-                                                <td> EDDY SUPRIATNO S.Pd</td>
+                                                <td> ALEX BAYU PRATAMA PUTRA S.Pd</td>
                                             </tr>
                                             <tr>
                                                 <td>NIP</td>
@@ -48,7 +48,7 @@
                                             <tr>
                                                 <td>NAMA</td>
                                                 <td>:</td>
-                                                <td>Dra PETRIATI</td>
+                                                <td>MUHAMMAD SHODIQ</td>
                                             </tr>
                                             <tr>
                                                 <td>NIP</td>
@@ -70,6 +70,7 @@
                 </div>
                 <div class="col-lg-10" id="c_sndmsg">
                     <form action="{{route('addReport')}}" method="post">
+                        
                         @csrf
                         <div class="row">
                             <div class="col-md-4">
@@ -258,34 +259,7 @@
                                                 </i>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                            {{-- <div class="col-md-4">
-                                <div class="form-group">
-                                    <label>LamaPengerjaan</label>
-                                    <div class="input-group">
-                                        <div class="input-group">
-                                            <input type="time" name="selesai" value="" class="form-control timepicker2"
-                                                required="" id="end" fdprocessedid="k4sng7">
-                                            <div class="input-group-addon">
-                                                <i class="fa fa-clock-o">
-    
-                                                </i>
-                                            </div>
-                                        </div>
-                                        <div class="input-group-addon">Menit</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="control-label hide emsgjam">
-                                <div class="alert alert-confirm text-warning">
-                                    <i class="fa fa-exclamation">
-    
-                                    </i> Lama Pengerjaan nol menit atau minus
-                                </div>
-                            </div>
-                        </div> --}}
+                      
     
                         <div class="row" id="c_output">
                             <div class="col-md-6">
@@ -293,8 +267,10 @@
                                 <!-- <button type="submit" class="btn btn-danger">Cencel</button> -->
                                 <a href="/home" class="btn btn-danger btn-md btn-form-cancel d-noprint"
                                     type="button">Cancel</a>
-                                <!-- <button type="submit" class="btn btn-primary">Save</button> -->
-                                <button type="submit"> SAVE </button>
+                                <button type="submit" class="btn btn-primary">Save</button>
+                                <!-- <button type="submit" class> Save </button> -->
+                                </div>
+                                </div>
                     </form>
 
                             @endsection

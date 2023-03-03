@@ -145,21 +145,38 @@ class ReportController extends Controller
                  $laporans = Report::all();
                  return view('report.tk',compact('laporans'));
              }
-
-
-public function delete($id){
-    $laporan = Report::find($id);
-
-    $laporan->delete();
-
-    return redirect('report/delete')->with('success','Acara Sudah dihapus!');
-}
-// public function delete($id){
-//     $lapoaran = Report::find($id);
-//     $name = $laporan->name;
-//     $laporan->delete();
-
-//     return redirect('/all_guests')->with('success','Tamu Atas Nama '.$name.' Sudah dihapus!');
-// }
+             public function edit_report($id){
+                $edit = Report::find($id);
+                $features = Feature::all();
+        
+                return view ('report.bulan', compact(['edit','feature']));
+                }
+             public function update_report(Request $request,$id){
+               // dd($request);
+            Report::create([
+                'tanggal' => $request->kapan,
+                'jenis' => $request->jenis,
+                'kegiatan_tugas_jabatan' => $request->kegiatan,
+                'mulai' => $request->mulai,
+                'selesai' => $request->selesai,
+            ]);
+                $laporans->save();
+        
+                return redirect('bulan')->with('success','Acara Sudah diupdate!');
+             }
+           
+            public function delete($id){
+                $features = Feature::find($id);
+        
+                $features->delete();
+        
+                return redirect('bulan')->with('success','Acara Sudah dihapus!');
+            }
+            public function delete_report($id){
+                $laporans = Report::find($id);
+                $laporans->remove();
+        
+                return redirect('bulan')->with('success','Tamu Atas Nama '.$name.' Sudah dihapus!');
+            }
 
 }
