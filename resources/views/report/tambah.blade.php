@@ -69,17 +69,19 @@
                     </table>
                 </div>
                 <div class="col-lg-10" id="c_sndmsg">
-                    <form action="{{route('addReport')}}" method="post">
-                        
-                        @csrf
+                    {{-- <form action="{{route('addReport')}}" method="post"> --}}
+                        <form action=<?php @$laporans!=null? printf('/save_update_report'.'/'.$laporans->id) : printf('/addReport') ?> method="post">
+                            @csrf
+                            
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label>Tanggal</label>
                                     <div class="input-group">
                                         <input type="date" name="kapan" value="13/02/2023"
-                                            class="form-control datepicker-here" id="tgl" data-language="id" required=""
-                                            fdprocessedid="4um4y">
+                                        class="form-control datepicker-here" id="tgl" data-language="id" required=""
+                                        fdprocessedid="4um4y" value=<?php if(@$edit!=null) printf($edit->kapan)?>>
+                                           
                                         <div class="input-group-addon">
                                         </div>
                                     </div>
@@ -259,18 +261,11 @@
                                                 </i>
                                             </div>
                                         </div>
-                      
-    
-                        <div class="row" id="c_output">
-                            <div class="col-md-6">
-                                <br>
-                                <!-- <button type="submit" class="btn btn-danger">Cencel</button> -->
-                                <a href="/home" class="btn btn-danger btn-md btn-form-cancel d-noprint"
-                                    type="button">Cancel</a>
-                                <button type="submit" class="btn btn-primary">Save</button>
-                                <!-- <button type="submit" class> Save </button> -->
-                                </div>
-                                </div>
+
+                                   <br> <button type="submit" class="btn btn-primary">Save</button> 
+                               
+                        
+                           
                     </form>
 
                             @endsection

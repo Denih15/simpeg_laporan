@@ -265,17 +265,18 @@
                             <td>{{$laporan->selesai}}</td>
                             <td>
                             <span class="badge text-bg-warning">
-                        <a href="/edit/{{$laporan->id}}" style="text-decoration: none; color:black">Edit</a>
+                                @csrf
+                        <a href="/edit/{{$laporan->id}}"method="post" style="text-decoration: none; color:black" class="btn btn-info" >Edit</a>
                     </span>
-                  
+                    <span class="badge text-bg-danger">
                     <form action="/delete/{{$laporan->id}}" method="post">
                         @csrf
-                        <button type="submit" class="badge text-bg-danger">
-                            Delete
-                                    </form>
-                                </span>
+                    
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                            
+                    </span>
                             </td>
-                        </tr> 
+                        </tr>  
                         @php
             $no++;
             @endphp

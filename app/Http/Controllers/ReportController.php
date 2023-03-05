@@ -52,41 +52,13 @@ class ReportController extends Controller
     {
         
     }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
     /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        //
-    }
-   
+
    public function addReport()
  {
        $laporan = Report::all();
@@ -145,36 +117,47 @@ class ReportController extends Controller
                  $laporans = Report::all();
                  return view('report.tk',compact('laporans'));
              }
-             public function edit_report($id){
-                $edit = Report::find($id);
-                $features = Feature::all();
+          
+                    /**
+             * Show the form for editing the specified resource.
+             *
+             * @param  int  $id
+             * @return \Illuminate\Http\Response
+             */
+            public function update($id)
+            {
+                $laporans = Report::find($id);
+                return view('report.tambah',compact('laporans'));
+            }
+
+            /**
+             * Update the specified resource in storage.
+             *
+             * @param  \Illuminate\Http\Request  $request
+             * @param  int  $id
+             * @return \Illuminate\Http\Response
+             */
+            public function save_update(Request $request, $id)
+            {
+                // dd($request->all());
+                $laporans = Report::find($id);
+                $laporans->tanggal = $request->kapan;
+                $laporans->jenis = $request->jenis;
+                $laporans->kegiatan_tugas_jabatan = $request->kegiatan;
+                $laporans->mulai = $request->mulai;
+                $laporans->selesai = $request->selesai;
         
-                return view ('report.bulan', compact(['edit','feature']));
-                }
-             public function update_report(Request $request,$id){
-               // dd($request);
-            Report::create([
-                'tanggal' => $request->kapan,
-                'jenis' => $request->jenis,
-                'kegiatan_tugas_jabatan' => $request->kegiatan,
-                'mulai' => $request->mulai,
-                'selesai' => $request->selesai,
-            ]);
                 $laporans->save();
         
-                return redirect('bulan')->with('success','Acara Sudah diupdate!');
-             }
+                return redirect('report/bulan')->with('success','Acara Sudah diupdate!');
+        
+            }
            
             public function delete($id){
                 $features = report::find($id)->delete();
         
                 return redirect('report/bulan')->with('success','Acara Sudah dihapus!');
             }
-            public function delete_report($id){
-                $laporans = Report::find($id);
-                $laporans->remove();
-        
-                return redirect('bulan')->with('success','Tamu Atas Nama '.$name.' Sudah dihapus!');
-            }
 
+       
 }
