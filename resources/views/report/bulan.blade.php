@@ -1,7 +1,7 @@
 @extends('layouts.app') @section('content')
 
 <section class="content-header">
-            <h1> Laporan SKP per OPD </h1>
+            <h1> Laporan Sasaran Kinerja Pegawai </h1>
             <table width="100%" id="head_rpt">
                 <tbody>
                     <tr>
@@ -179,6 +179,42 @@
                             </th>
                             <th
                                 nowrap=""
+                                data-column="1"
+                                class="tablesorter-header tablesorter-headerUnSorted"
+                                tabindex="0"
+                                scope="col"
+                                role="columnheader"
+                                aria-disabled="false"
+                                aria-controls="data-table"
+                                unselectable="on"
+                                aria-sort="none"
+                                aria-label="First Name: No sort applied, activate to apply an ascending sort"
+                                style="user-select: none"
+                            >
+                                <div class="tablesorter-header-inner">
+                                    Nama
+                                </div>
+                            </th>
+                            <th
+                                nowrap=""
+                                data-column="1"
+                                class="tablesorter-header tablesorter-headerUnSorted"
+                                tabindex="0"
+                                scope="col"
+                                role="columnheader"
+                                aria-disabled="false"
+                                aria-controls="data-table"
+                                unselectable="on"
+                                aria-sort="none"
+                                aria-label="First Name: No sort applied, activate to apply an ascending sort"
+                                style="user-select: none"
+                            >
+                                <div class="tablesorter-header-inner">
+                                    NIP
+                                </div>
+                            </th>
+                            <th
+                                nowrap=""
                                 data-column="2"
                                 class="tablesorter-header tablesorter-headerUnSorted"
                                 tabindex="0"
@@ -260,6 +296,8 @@
                         <tr class="odd">
                             <td>{{$no}}</td>
                             <td>{{$laporan->tanggal}}</td>
+                            <td>{{$laporan->nama}}</td>
+                            <td>{{$laporan->nip}}</td>
                             <td>{{$laporan->kegiatan_tugas_jabatan}}</td>
                             <td>{{$laporan->mulai}}</td>
                             <td>{{$laporan->selesai}}</td>

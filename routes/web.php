@@ -35,6 +35,7 @@ Route::get('/report/reportverification',[ReportController::class,'reportverifica
 Route::get('/report/reportrejected',[ReportController::class,'reportrejected']);
 Route::get('/report/reportverified',[ReportController::class,'reportverified']);
 Route::get('/report/bulan',[ReportController::class,'bulan']);
+Route::get('/report/wke',[ReportController::class,'wke']);
 Route::post('/report/pengaturan',[ReportController::class,'pengaturan']);
 Route::get('/report/pengaturan',[ReportController::class,'pengaturan']);
 Route::get('/report/tk',[ReportController::class,'tk']);

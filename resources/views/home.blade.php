@@ -56,7 +56,7 @@ $(document).ready(function(){
               <tr>
                 <td>Nama</td>
                 <td>:</td>
-                <td>EDDY SUPRIATNO S.Pd</td>
+                <td>ALEX BAYU PRATAMA PUTRA S.Pd</td>
                 </tr>
                 <tr>
                   <td>NIP</td>
@@ -74,7 +74,7 @@ $(document).ready(function(){
                       <td>-</td>
                       </tr>
                       <tr>
-                        <td>Besaran TPP<button name="" type="button" class="btn btn-default btn-xs pull-right" id="shwtpp">
+                        <td>Besaran TPP
                           <i class="fa fa-sign-in">
                           </i>
                           </button>
@@ -168,7 +168,7 @@ $(document).ready(function(){
             <div class="col-lg-3 col-xs-6">
               <div class="small-box bg-green">
                 <div class="inner">
-                  <h3> 152 </h3>
+                  <h3>{{App\Models\Report::all()->where('jenis',1)->count()}}</h3>
                   <p>Laporan terverifikasi</p>
                 </div>
                 <div class="icon">
@@ -183,7 +183,8 @@ $(document).ready(function(){
             <div class="col-lg-3 col-xs-6">
               <div class="small-box bg-red">
                 <div class="inner">
-                  <h3> 0 </h3>
+                <h3>{{App\Models\Report::all()->where('jenis',2)->count()}}</h3>
+                
                   <p>Laporan ditolak</p>
                 </div>
                 <div class="icon"><i class="fa fa-archive">

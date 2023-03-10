@@ -69,6 +69,8 @@ class ReportController extends Controller
    public function tambahLaporan(Request $request){
     // dd($request);
     Report::create([
+        'nama' => $request->nama,
+        'nip' => $request->nip,
         'tanggal' => $request->kapan,
         'jenis' => $request->jenis,
         'kegiatan_tugas_jabatan' => $request->kegiatan,
@@ -107,6 +109,11 @@ class ReportController extends Controller
              $laporans = Report::all();
              return view('report.bulan',compact('laporans'));
          }
+         public function wke()
+         {
+               $laporans = Report::all();
+               return view('report.wke',compact('laporans'));
+           }
          public function pengaturan()
          {
                $laporans = Report::all();
@@ -141,6 +148,8 @@ class ReportController extends Controller
             {
                 // dd($request->all());
                 $laporans = Report::find($id);
+                $laporans->nama = $request->nama;
+                $laporans->nip = $request->nip;
                 $laporans->tanggal = $request->kapan;
                 $laporans->jenis = $request->jenis;
                 $laporans->kegiatan_tugas_jabatan = $request->kegiatan;
@@ -149,14 +158,14 @@ class ReportController extends Controller
         
                 $laporans->save();
         
-                return redirect('report/bulan')->with('success','Acara Sudah diupdate!');
+                return redirect('report/bulan')->with('success','Laporan Sudah diupdate!');
         
             }
            
             public function delete($id){
                 $features = report::find($id)->delete();
         
-                return redirect('report/bulan')->with('success','Acara Sudah dihapus!');
+                return redirect('report/bulan')->with('success','Laporan Sudah dihapus!');
             }
 
        

@@ -21,7 +21,7 @@
       
     <div class="" id="lavoran">
         <div style="padding: 20px 0"> ALEX BAYU PRATAMA PUTRA S.Pd<br>NIP.196802211995121003</div>
-        <div class="alert">Belum Ada Data</div><div style="display:none">
+        <div class="alert">Belum ada data</div><div style="display:none">
     </div></div></div>
     </div>
     </div>

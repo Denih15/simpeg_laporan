@@ -79,7 +79,7 @@
                                             selected="selected"
                                             data-select2-id="6"
                                         >
-                                            EDDY SUPRTIATNO, S.Pd, M.Pd
+                                            TASLIM, S.Pd, M.Pd
                                             (NIP.197005032006042008) KEPALA
                                             BIDANG PEMBINAAN KETENAGAAN DAN
                                             PENGELOLA DATA PENDIDIKAN

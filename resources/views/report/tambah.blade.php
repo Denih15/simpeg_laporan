@@ -69,25 +69,31 @@
                     </table>
                 </div>
                 <div class="col-lg-10" id="c_sndmsg">
-                    {{-- <form action="{{route('addReport')}}" method="post"> --}}
+                    <!-- {{-- <form action="{{route('addReport')}}" method="post"> --}} -->
                         <form action=<?php @$laporans!=null? printf('/save_update_report'.'/'.$laporans->id) : printf('/addReport') ?> method="post">
                             @csrf
-                            
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label>Tanggal</label>
-                                    <div class="input-group">
-                                        <input type="date" name="kapan" value="13/02/2023"
-                                        class="form-control datepicker-here" id="tgl" data-language="id" required=""
-                                        fdprocessedid="4um4y" value=<?php if(@$edit!=null) printf($edit->kapan)?>>
-                                           
-                                        <div class="input-group-addon">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Tanggal</label>
+                                        <div class="input-group">
+                                            <input type="date" name="kapan" value="13/02/2023"
+                                            class="form-control datepicker-here" id="tgl" data-language="id" required=""
+                                            fdprocessedid="4um4y" value=<?php if(@$edit!=null) printf($edit->kapan)?>>
+                                               
+                                            <div class="input-group-addon">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                            <div class="mb-3">
+                                <label class="form-label">Nama</label>
+                                <input type="text" class="form-control" name="nama">
+                                <div class="mb-3">
+                                    <label class="form-label">NIP</label>
+                                    <input type="text" class="form-control" name="nip">
+                        
                         <div>
                             <label>Jenis Laporan</label>
                             <select name="jenis" class="form-control" id="pilih_jenis" fdprocessedid="wek9cn">
@@ -261,10 +267,10 @@
                                                 </i>
                                             </div>
                                         </div>
-
-                                   <br> <button type="submit" class="btn btn-primary">Save</button> 
                                
-                        
+                                     <button type="submit" class="btn btn-success">Save</button> 
+                                    <button type="submit" class="btn btn-primary">Pending</button> 
+                                 <button type="submit" class="btn btn-danger">Reject</button>
                            
                     </form>
 

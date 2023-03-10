@@ -16,6 +16,8 @@ return new class extends Migration
         Schema::create('reports', function (Blueprint $table) {
             $table->id();
             $table->date('tanggal');
+            $table->string('nama');
+            $table->string('nip');
             $table->string('jenis');
             $table->string('kegiatan_tugas_jabatan');
             $table->time('mulai');
