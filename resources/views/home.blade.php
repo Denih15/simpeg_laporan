@@ -136,7 +136,7 @@ $(document).ready(function(){
                 </i>
               </a>
               <div class="inner">
-                  <h3>0</h3>
+                 
                   <p>Laporan Harian</p>
                 </div>
                 <div class="icon">
@@ -153,7 +153,7 @@ $(document).ready(function(){
             <div class="col-lg-3 col-xs-6">
               <div class="small-box bg-blue">
                 <div class="inner">
-                  <h3> 0 </h3>
+                  <h3> 2 </h3>
                   <p>Laporan menunggu verifikasi</p>
                 </div>
                 <div class="icon">
@@ -183,7 +183,7 @@ $(document).ready(function(){
             <div class="col-lg-3 col-xs-6">
               <div class="small-box bg-red">
                 <div class="inner">
-                <h3>{{App\Models\Report::all()->where('jenis',2)->count()}}</h3>
+                <h3>2</h3>
                 
                   <p>Laporan ditolak</p>
                 </div>

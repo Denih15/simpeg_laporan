@@ -256,31 +256,43 @@
                                     selesai
                                 </div>
                             </th>
-                            <th
-                                nowrap=""
-                                data-column="7"
-                                class="tablesorter-header tablesorter-headerUnSorted"
-                                tabindex="0"
-                                scope="col"
-                                role="columnheader"
-                                aria-disabled="false"
-                                aria-controls="data-table"
-                                unselectable="on"
-                                aria-sort="none"
-                                aria-label="Comments: No sort applied, activate to apply an ascending sort"
-                                style="user-select: none"
-                            >
-                         
-                                <div class="tablesorter-header-inner">aksi</div>
-                            </th>
+                   
                         </tr>
                     </thead>
                     <tbody aria-live="polite" aria-relevant="all">
                   
-                </table>
-            </body>
+                          
+                        <tr class="odd">
+                            <td>1</td>
+                            <td>2023-03-06</td>
+                            <td>Denih</td>
+                            <td>08342132143533</td>
+                            <td>hkjdfhkjdfshkj</td>
+                            <td>02:28:00</td>
+                            <td>06:28:00</td>
+                           
+                       
+                            </td>
+                        </tr>  
+                        <tr class="odd">
+                            <td>2</td>
+                            <td>2023-03-06</td>
+                            <td>Denih</td>
+                            <td>08342132143533</td>
+                            <td>hkjdfhkjdfshkj</td>
+                            <td>02:28:00</td>
+                            <td>06:28:00</td>
+                           
+                      
+                            </td>
+                        </tr>  
+                  
+
+                      
+                    </tbody>
+        </table>
 
 <div class="col-md-6">
-    <a href="/report" class="btn btn-danger btn-md btn-form-cancel d-noprint" type="button">Back</a>
+    <a href="/home" class="btn btn-danger btn-md btn-form-cancel d-noprint" type="button">Back</a>
 	</div>
 @endsection
