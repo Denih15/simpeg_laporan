@@ -297,7 +297,7 @@
                             <td>{{$no}}</td>
                             <td>{{$laporan->tanggal}}</td>
                             <td>{{$laporan->nama}}</td>
-                            <td>{{$laporan->nip}}</td>
+                            <td>{{$laporan->employee->nip}}</td>
                             <td>{{$laporan->kegiatan_tugas_jabatan}}</td>
                             <td>{{$laporan->mulai}}</td>
                             <td>{{$laporan->selesai}}</td>

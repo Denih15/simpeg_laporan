@@ -7,6 +7,8 @@ use App\Models\Role;
 use App\Models\Feature;
 use App\Models\Report;
 
+use Illuminate\Support\Facades\Auth;
+
 class ReportController extends Controller
 {
      /**
@@ -70,7 +72,7 @@ class ReportController extends Controller
     // dd($request);
     Report::create([
         'nama' => $request->nama,
-        'nip' => $request->nip,
+        'employee_id' => Auth::user()->employee->id,
         'tanggal' => $request->kapan,
         'jenis' => $request->jenis,
         'kegiatan_tugas_jabatan' => $request->kegiatan,

@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\User;
 
 class DatabaseSeeder extends Seeder
 {
@@ -20,6 +21,13 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+        User::create([
+            'id' => 1,
+            'name' => 'denih',
+            'email' => 'denih4578@gmail.com',
+            'password' => '$2y$10$jQLEfIyUjIvYNul7zcIJSOxJWdfCt12qhRVxw/18qhvgHs55N1N8y',
+            'role_id' => 1
+        ]);
         $this->call([
             RoleSeeder::class,
             FeatureSeeder::class,

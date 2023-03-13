@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->date('tanggal');
             $table->string('nama');
-            $table->string('nip');
+            $table->integer('employee_id');
             $table->string('jenis');
             $table->string('kegiatan_tugas_jabatan');
             $table->time('mulai');

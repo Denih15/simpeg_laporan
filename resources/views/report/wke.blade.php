@@ -59,51 +59,20 @@
                                     <th>HARI/ TANGGAL</th>
                                     <th>WKE</th>
                                     </tr>
-                                    <tr>
-                                        <th>1</th>
-                                        <th>2</th>
-                                        <th>3</th>
-                                        </tr>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Rabu, 1 Maret 2023</td>
-                                            <td>-</td>
+                                    @php
+            $no = 1;
+            @endphp
+                                    @foreach($laporans as $laporan)
+                                    <td>{{$no}}</td>
+                                            <td>{{$laporan->tanggal}}</td>
+                                            <td>{{$laporan->selesai}}</td>
                                             </tr>
+                                            @endforeach
+                                            @php
+            $no++;
+            @endphp
                                             <tr>
-                                                <td>2</td>
-                                                <td>Kamis, 2 Maret 2023</td>
-                                                <td>-</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3</td>
-                                                    <td>Jum`at, 3 Maret 2023</td>
-                                                    <td>-</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>4</td>
-                                                        <td>Sabtu, 4 Maret 2023</td>
-                                                        <td>-</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>5</td>
-                                                            <td>Minggu, 5 Maret 2023</td>
-                                                            <td>-</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>6</td>
-                                                                <td>Senin, 6 Maret 2023</td>
-                                                                <td>-</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>7</td>
-                                                                    <td>Selasa, 7 Maret 2023</td>
-                                                                    <td>-</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>8</td>
-                                                                        <td>Rabu, 8 Maret 2023</td>
-                                                                        <td>-</td>
-                                                                        </tr>
+                                               
                                                                         <tr>
                                                                             <td colspan="2">Total Waktu Kerja Efektif bulan Maret 2023</td>
                                                                             <td>0 jam</td>

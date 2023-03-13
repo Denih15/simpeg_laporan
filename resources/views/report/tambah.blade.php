@@ -90,11 +90,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Nama</label>
                                 <input type="text" class="form-control" name="nama">
-                                <div class="mb-3">
-                                    <label class="form-label">NIP</label>
-                                    <input type="text" class="form-control" name="nip">
-                        
-                        <div>
+                    
                             <label>Jenis Laporan</label>
                             <select name="jenis" class="form-control" id="pilih_jenis" fdprocessedid="wek9cn">
                                 <option value="1" selected="selected">Kegiatan</option>
