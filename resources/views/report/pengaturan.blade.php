@@ -79,7 +79,7 @@
                                             selected="selected"
                                             data-select2-id="6"
                                         >
-                                            TASLIM, S.Pd, M.Pd
+                                            ALEX BAYU PRATAMA PUTRA, S.Pd, M.Pd
                                             (NIP.197005032006042008) KEPALA
                                             BIDANG PEMBINAAN KETENAGAAN DAN
                                             PENGELOLA DATA PENDIDIKAN

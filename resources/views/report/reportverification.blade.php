@@ -260,35 +260,23 @@
                         </tr>
                     </thead>
                     <tbody aria-live="polite" aria-relevant="all">
-                  
-                          
-                                 
                     @php
             $no = 1;
             @endphp
-                        @foreach($laporans as $laporan)
+                      
                         <tr class="odd">
                             <td>{{$no}}</td>
-                            <td>{{$laporan->tanggal}}</td>
-                            <td>{{$laporan->nama}}</td>
-                            <td>{{$laporan->employee->nip}}</td>
-                            <td>{{$laporan->kegiatan_tugas_jabatan}}</td>
-                            <td>{{$laporan->mulai}}</td>
-                            <td>{{$laporan->selesai}}</td>
-                            </tr>  
-                      
-                      
-
-                        @endforeach
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                         
+                        </tr>  
                         @php
             $no++;
-            @endphp
-                      
-                            
-                 
-                  
-
-                      
+            @endphp       
                     </tbody>
         </table>
 

@@ -20,7 +20,7 @@
             </div>
       
     <div class="" id="lavoran">
-        <div style="padding: 20px 0"> ALEX BAYU PRATAMA PUTRA S.Pd<br>NIP.196802211995121003</div>
+        <div style="padding: 20px 0"> DENIH S.Pd<br>NIP.089977354343445</div>
         <div class="alert">Belum ada data</div><div style="display:none">
     </div></div></div>
     </div>

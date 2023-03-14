@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\User;
+use App\Models\Employees;
 
 class DatabaseSeeder extends Seeder
 {
@@ -27,6 +28,19 @@ class DatabaseSeeder extends Seeder
             'email' => 'denih4578@gmail.com',
             'password' => '$2y$10$jQLEfIyUjIvYNul7zcIJSOxJWdfCt12qhRVxw/18qhvgHs55N1N8y',
             'role_id' => 1
+        ]);
+        User::create([
+            'id' => 2,
+            'name' => 'shodiq',
+            'email' => 'ms2003412@gmail.com',
+            'password' => '$2y$10$jQLEfIyUjIvYNul7zcIJSOxJWdfCt12qhRVxw/18qhvgHs55N1N8y',
+            'role_id' => 2
+        ]);
+        Employees::create([
+            'id'=>1,
+            'nip'=>"14091999202880 2",
+            'position'=>'direktur',
+            'user_id'=>1
         ]);
         $this->call([
             RoleSeeder::class,

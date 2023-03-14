@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('nama');
             $table->integer('employee_id');
             $table->string('jenis');
+            $table->integer('status');
             $table->string('kegiatan_tugas_jabatan');
             $table->time('mulai');
             $table->time('selesai');

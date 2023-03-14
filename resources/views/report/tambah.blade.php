@@ -27,12 +27,12 @@
                                             <tr>
                                                 <td>NAMA</td>
                                                 <td>:</td>
-                                                <td> ALEX BAYU PRATAMA PUTRA S.Pd</td>
+                                                <td> DENIH S.Pd</td>
                                             </tr>
                                             <tr>
                                                 <td>NIP</td>
                                                 <td>:</td>
-                                                <td>196802211995121003</td>
+                                                <td>089977354343445</td>
                                             </tr>
                                             <tr>
                                                 <td style="vertical-align: top;">Jabatan</td>

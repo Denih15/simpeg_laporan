@@ -1,3 +1,7 @@
+<?php 
+    $totalwke = 0;
+?>
+
 @extends('layouts.app')
 @section('content')
 
@@ -34,7 +38,7 @@
                 <tr>
                 <th width="100" style="text-align:left">NAMA</th>
                 <th width="10">:</th>
-                <td>ALEX BAYU PRATAMA PUTRA S.Pd</td>
+                <td>DENIH S.Pd</td>
                 </tr>
                 <tr>
                     <th style="text-align:left">NIP</th>
@@ -71,10 +75,10 @@
                                             $interval = $a->diff($b);
                                             
                                             $diff= $interval->format("%H"); 
-
+                                            $totalwke = $totalwke + $diff;
                                             
                                             ?>
-                                            <td>{{@$diff}}</td>
+                                            <td>{{@$diff}} jam</td>
                                             
 
 
@@ -89,11 +93,11 @@
                                                                         <tr>
                                                                             <td colspan="2">Total Waktu Kerja Efektif bulan Maret 2023</td>
                                                                           
-                                                                                <td>{{@$diff}}</td>
+                                                                                <td>{{@$totalwke}} jam</td>
                                                                             
                                                                             </tr>
                                                                             <tr>
-                                                                                <td colspan="4">Waktu kerja efektif minimal / bulan = 112,5 jam      </td>
+                                                                                <td colspan="4">Waktu kerja efektif minimal / bulan = 117 jam      </td>
                                                                              
                                                                                 </tr>
                                                                                 </tbody>

@@ -78,6 +78,8 @@ class ReportController extends Controller
         'kegiatan_tugas_jabatan' => $request->kegiatan,
         'mulai' => $request->mulai,
         'selesai' => $request->selesai,
+        'status' => 1,
+
     ]);
     // return $this->getAllEvents();
     return redirect('/report/bulan')->with('success','laporan ditambahkan!');
@@ -91,8 +93,8 @@ class ReportController extends Controller
 
    public function reportrejected()
    {
-         $laporan = Report::all();
-         return view('report.reportrejected',compact('laporan'));
+         $laporans = Report::all()->where('status',1);
+         return view('report.reportrejected',compact('laporans'));
      }
     
      public function reportverified()
@@ -170,5 +172,7 @@ class ReportController extends Controller
                 return redirect('report/bulan')->with('success','Laporan Sudah dihapus!');
             }
 
-       
+            public function setuju(Request $request, $id)
+            $laporans = Report::find($id);
+            $laporans-> = $request->status;
 }

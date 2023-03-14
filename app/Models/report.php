@@ -9,7 +9,7 @@ use App\Models\Employees;
 
 class report extends Model
 {
-    protected $fillable = ['tanggal','nama','employee_id','jenis','kegiatan_tugas_jabatan','mulai','selesai','lama_pengerjaan'];
+    protected $fillable = ['tanggal','nama','employee_id','jenis','status','kegiatan_tugas_jabatan','mulai','selesai','lama_pengerjaan'];
     protected $table = 'reports';
 
     public function employee()

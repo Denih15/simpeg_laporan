@@ -47,3 +47,5 @@ Route::post('save_update_report/{id}',[ReportController::class,'save_update']);
 
 Route::post('delete/{id}',[ReportController::class,'delete']);
 
+Route::get('setuju/{id}',[ReportController::class,'setuju']);
+Route::get('tolak/{id}',[ReportController::class,'tolak']);

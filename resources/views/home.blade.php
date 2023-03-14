@@ -51,17 +51,17 @@ $(document).ready(function(){
             <td width="300">
               <b>Informasi Pegawai</b>
               </td>
-              <td colspan="2">:</td>
+              <td colspan="2"></td>
               </tr>
               <tr>
                 <td>Nama</td>
                 <td>:</td>
-                <td>ALEX BAYU PRATAMA PUTRA S.Pd</td>
+                <td>DENIH S.Pd</td>
                 </tr>
                 <tr>
                   <td>NIP</td>
                   <td>:</td>
-                  <td>196802211995121003</td>
+                  <td>089977354343445</td>
                   </tr>
                   <tr>
                     <td>Jabatan</td>
@@ -71,7 +71,7 @@ $(document).ready(function(){
                     <tr>
                       <td>Kelas Jabatan</td>
                       <td>:</td>
-                      <td>-</td>
+                      <td>Wali Kelas XII IPS 1</td>
                       </tr>
                       <tr>
                         <td>Besaran TPP
@@ -87,12 +87,12 @@ $(document).ready(function(){
                             <tr>
                               <td>Akumulasi Jam Kerja</td>
                               <td>:</td>
-                              <td>0 Jam</td>
+                              <td>3,9 Jam</td>
                               </tr>
                               <tr>
-                                <td>Kekurangan jam kerja dari 112,5 jam</td>
+                                <td>Kekurangan jam kerja dari 117 jam</td>
                                 <td>:</td>
-                                <td>112.5 Jam</td>
+                                <td>0 Jam</td>
                                 </tr>
                                   </tbody>
                                   </table>
