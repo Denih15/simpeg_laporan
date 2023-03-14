@@ -63,9 +63,22 @@
             $no = 1;
             @endphp
                                     @foreach($laporans as $laporan)
-                                    <td>{{$no}}</td>
+                                    <td>{{$no++}}</td>
                                             <td>{{$laporan->tanggal}}</td>
-                                            <td>{{$laporan->selesai}}</td>
+                                            <?php
+                                            $a = new DateTime($laporan->selesai);
+                                            $b = new DateTime($laporan->mulai);
+                                            $interval = $a->diff($b);
+                                            
+                                            $diff= $interval->format("%H"); 
+
+                                            
+                                            ?>
+                                            <td>{{@$diff}}</td>
+                                            
+
+
+                                           
                                             </tr>
                                             @endforeach
                                             @php
@@ -75,10 +88,13 @@
                                                
                                                                         <tr>
                                                                             <td colspan="2">Total Waktu Kerja Efektif bulan Maret 2023</td>
-                                                                            <td>0 jam</td>
+                                                                          
+                                                                                <td>{{@$diff}}</td>
+                                                                            
                                                                             </tr>
                                                                             <tr>
-                                                                                <td colspan="3">Waktu kerja efektif minimal / bulan = 112,5 jam</td>
+                                                                                <td colspan="4">Waktu kerja efektif minimal / bulan = 112,5 jam      </td>
+                                                                             
                                                                                 </tr>
                                                                                 </tbody>
                                                                                 </table>

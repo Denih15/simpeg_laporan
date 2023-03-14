@@ -151,7 +151,7 @@ class ReportController extends Controller
                 // dd($request->all());
                 $laporans = Report::find($id);
                 $laporans->nama = $request->nama;
-                $laporans->nip = $request->nip;
+                $laporans->employee_id = $request->id;
                 $laporans->tanggal = $request->kapan;
                 $laporans->jenis = $request->jenis;
                 $laporans->kegiatan_tugas_jabatan = $request->kegiatan;

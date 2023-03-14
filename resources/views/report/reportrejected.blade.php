@@ -262,32 +262,25 @@
                     <tbody aria-live="polite" aria-relevant="all">
                   
                           
-                            <tr class="odd">
-                                <td>1</td>
-                                <td>2023-03-06</td>
-                                <td>Denih</td>
-                                <td>08342132143533</td>
-                                <td>hkjdfhkjdfshkj</td>
-                                <td>02:28:00</td>
-                                <td>06:28:00</td>
-                               
-                           
-                                </td>
-                            </tr>  
-                            <tr class="odd">
-                                <td>2</td>
-                                <td>2023-03-06</td>
-                                <td>Denih</td>
-                                <td>08342132143533</td>
-                                <td>hkjdfhkjdfshkj</td>
-                                <td>02:28:00</td>
-                                <td>06:28:00</td>
-                               
-                          
-                                </td>
+                    @php
+            $no = 1;
+            @endphp
+                        @foreach($laporans as $laporan)
+                        <tr class="odd">
+                            <td>{{$no}}</td>
+                            <td>{{$laporan->tanggal}}</td>
+                            <td>{{$laporan->nama}}</td>
+                            <td>{{$laporan->employee->nip}}</td>
+                            <td>{{$laporan->kegiatan_tugas_jabatan}}</td>
+                            <td>{{$laporan->mulai}}</td>
+                            <td>{{$laporan->selesai}}</td>
                             </tr>  
                       
-    
+                            @php
+            $no++;
+            @endphp
+
+                        @endforeach
                           
                         </tbody>
         </table>

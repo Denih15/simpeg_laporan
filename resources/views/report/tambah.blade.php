@@ -264,9 +264,9 @@
                                             </div>
                                         </div>
                                
-                                    <br> <br><button type="submit" class="btn btn-success">Save</button>  
-                                    <a href="reportverification" class="btn btn-primary" >Pending</a> 
-                                    <a href="reportrejected" class="btn btn-danger" >Reject</a> 
+                                    <br> <br><button type="submit" class="btn btn-success">Save</button> 
+                                    <a href="reportverification" class="btn btn-primary"type="submit" >Pending</a> 
+                                    <a href="reportrejected" class="btn btn-danger"type="submit" >Reject</a> 
                                           
                     </form>
 
