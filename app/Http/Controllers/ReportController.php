@@ -86,8 +86,8 @@ class ReportController extends Controller
    }
    public function reportverification()
  {
-       $laporan = Report::all();
-       return view('report.reportverification',compact('laporan'));
+       $laporans = Report::all()->where('status',2);;
+       return view('report.reportverification',compact('laporans'));
    }
  
 
@@ -99,7 +99,7 @@ class ReportController extends Controller
     
      public function reportverified()
    {
-         $laporans = Report::all();
+         $laporans = Report::all()->where('status',3);
         //  dd($laporan);
          return view('report.reportverified',compact('laporans'));
      }
@@ -167,12 +167,25 @@ class ReportController extends Controller
             }
            
             public function delete($id){
-                $features = report::find($id)->delete();
+                $laporan = report::find($id);
+                $laporan->status = 2;
+                $laporan->save();
         
                 return redirect('report/bulan')->with('success','Laporan Sudah dihapus!');
             }
 
-            public function setuju(Request $request, $id)
-            $laporans = Report::find($id);
-            $laporans-> = $request->status;
-}
+            public function setuju($id){
+
+                $laporans = Report::find($id);
+                $laporans->status = 3;
+                $laporans->save();
+                return view('report.reportverification',compact('laporans'));
+            }
+            public function tolak($id){
+
+                $laporans = Report::find($id);
+                $laporans->status = 2;
+                $laporans->save();
+                return view('report.reportrejected',compact('laporans'));
+            }
+ }

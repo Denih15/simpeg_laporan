@@ -1,7 +1,7 @@
 @extends('layouts.app') @section('content')
 
 <section class="content-header">
-            <h1> Laporan Menunggu Verifikasi </h1>
+            <h1> Laporan Sudah Ditolak </h1>
 
         <html lang="en" class="">
             <head>
@@ -259,24 +259,37 @@
                    
                         </tr>
                     </thead>
-                    <tbody aria-live="polite" aria-relevant="all">
+                  
                     @php
             $no = 1;
             @endphp
-                      
+                        @foreach($laporans as $laporan)
                         <tr class="odd">
                             <td>{{$no}}</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                         
+                            <td>{{$laporan->tanggal}}</td>
+                            <td>{{$laporan->nama}}</td>
+                            <td>{{$laporan->employee->nip}}</td>
+                            <td>{{$laporan->kegiatan_tugas_jabatan}}</td>
+                            <td>{{$laporan->mulai}}</td>
+                            <td>{{$laporan->selesai}}</td>
+                            <td>
+                            <span class="badge text-bg-warning">
+                                @csrf
+                        <a href="/edit/{{$laporan->id}}"method="post" style="text-decoration: none; color:black" class="btn btn-info" >Edit</a>
+                    </span>
+                    <span class="badge text-bg-danger">
+                    <form action="/delete/{{$laporan->id}}" method="post">
+                        @csrf
+                    
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                            
+                    </span>
+                            </td>
                         </tr>  
                         @php
             $no++;
-            @endphp       
+            @endphp
+             @endforeach         
                     </tbody>
         </table>
 

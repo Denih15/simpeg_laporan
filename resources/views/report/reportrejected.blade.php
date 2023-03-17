@@ -1,7 +1,7 @@
 @extends('layouts.app') @section('content')
 
 <section class="content-header">
-            <h1> Laporan Ditolak </h1>
+            <h1> Laporan Menunggu Verifikasi </h1>
 
         <html lang="en" class="">
             <head>
@@ -256,7 +256,23 @@
                                     selesai
                                 </div>
                             </th>
-                    
+                            <th
+                                nowrap=""
+                                data-column="7"
+                                class="tablesorter-header tablesorter-headerUnSorted"
+                                tabindex="0"
+                                scope="col"
+                                role="columnheader"
+                                aria-disabled="false"
+                                aria-controls="data-table"
+                                unselectable="on"
+                                aria-sort="none"
+                                aria-label="Comments: No sort applied, activate to apply an ascending sort"
+                                style="user-select: none"
+                            >
+                         
+                                <div class="tablesorter-header-inner">aksi</div>
+                            </th>
                         </tr>
                     </thead>
                     <tbody aria-live="polite" aria-relevant="all">
@@ -276,13 +292,13 @@
                             <td>
                             <span class="badge text-bg-warning">
                                 @csrf
-                        <a href="/edit/{{$laporan->id}}"method="post" style="text-decoration: none; color:black" class="btn btn-info" >Edit</a>
+                        <a href="/report/bulan{{$laporan->id}}"method="post" style="text-decoration: none; color:black" class="btn btn-info" >Setuju</a>
                     </span>
                     <span class="badge text-bg-danger">
                     <form action="/delete/{{$laporan->id}}" method="post">
                         @csrf
                     
-                        <button type="submit" class="btn btn-danger">Delete</button>
+                        <button type="submit" class="btn btn-danger">Tolak</button>
                             
                     </span>
                             </td>

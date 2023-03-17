@@ -151,10 +151,10 @@ $(document).ready(function(){
           </div>
           <div class="row">
             <div class="col-lg-3 col-xs-6">
-              <div class="small-box bg-blue">
+              <div class="small-box bg-red">
                 <div class="inner">
-                  <h3> 2 </h3>
-                  <p>Laporan menunggu verifikasi</p>
+                  <h3>{{App\Models\Report::all()->where('jenis',1)->where('status','2')->count()}}</h3>
+                  <p>Laporan sudah ditolak</p>
                 </div>
                 <div class="icon">
                   <i class="fa fa-archive">
@@ -168,24 +168,24 @@ $(document).ready(function(){
             <div class="col-lg-3 col-xs-6">
               <div class="small-box bg-green">
                 <div class="inner">
-                  <h3>{{App\Models\Report::all()->where('jenis',1)->count()}}</h3>
+                  <h3>{{App\Models\Report::all()->where('jenis',1)->where('status','3')->count()}}</h3>
                   <p>Laporan terverifikasi</p>
                 </div>
                 <div class="icon">
                   <i class="fa fa-archive">
                   </i>
                 </div>
-                     <a href="/report/reportverified" class="small-box-footer">Lihat Laporan <i class="fa fa-arrow-circle-right">
+                     <a href="/report/bulan" class="small-box-footer">Lihat Laporan <i class="fa fa-arrow-circle-right">
                      </i>
                     </a>
               </div>
             </div>
             <div class="col-lg-3 col-xs-6">
-              <div class="small-box bg-red">
+              <div class="small-box bg-blue">
                 <div class="inner">
-                <h3>2</h3>
+                <h3>{{App\Models\Report::all()->where('jenis',1)->where('status','1')->count()}}</h3>
                 
-                  <p>Laporan ditolak</p>
+                  <p>Laporan menunggu verifikasi</p>
                 </div>
                 <div class="icon"><i class="fa fa-archive">
                 </i>

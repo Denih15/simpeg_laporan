@@ -38,7 +38,7 @@ class DatabaseSeeder extends Seeder
         ]);
         Employees::create([
             'id'=>1,
-            'nip'=>"14091999202880 2",
+            'nip'=>"140919992028802",
             'position'=>'direktur',
             'user_id'=>1
         ]);
