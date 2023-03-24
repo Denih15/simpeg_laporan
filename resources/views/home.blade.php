@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('header')
 <h5>
-    Dashboard
+    Beranda
 </h5>
 
 @endsection
@@ -61,7 +61,7 @@ $(document).ready(function(){
                 <tr>
                   <td>NIP</td>
                   <td>:</td>
-                  <td>089977354343445</td>
+                  <td>197310212001242003</td>
                   </tr>
                   <tr>
                     <td>Jabatan</td>
@@ -87,10 +87,10 @@ $(document).ready(function(){
                             <tr>
                               <td>Akumulasi Jam Kerja</td>
                               <td>:</td>
-                              <td>3,9 Jam</td>
+                              <td>3 Jam</td>
                               </tr>
                               <tr>
-                                <td>Kekurangan jam kerja dari 117 jam</td>
+                                <td>Kekurangan jam kerja dari 90 jam</td>
                                 <td>:</td>
                                 <td>0 Jam</td>
                                 </tr>
@@ -117,20 +117,19 @@ $(document).ready(function(){
           </div>
         </div>
       </div>
+      
       <div class="box">
         <div class="box-body">
           <div class="nav-tabs-custom">
             <ul class="nav nav-tabs pull-right ui-sortable-handle">
               <li>
-                <li class="active">
-                  <a href="/home" data-toggle="tab">Laporan</a>
-                </li>
+             
               </ul>
               <div class="tab-content no-padding">
                 <div class="tab-pane active" id="laporan">
                   <div class="row">
                     <div class="col-lg-3 col-xs-6">
-              <div class="small-box bg-aqua">
+              <div class="small-box bg-blue">
                 <a href="/report/reportverified" class="btn btn-success btn-lg pull-right btn-edit" act="/report/reportverified" style="z-index: 999;position: inherit;margin: 5px;" title="Buat Laporan" alt="Buat Laporan">
                 <i class="fa fa-plus">
                 </i>
@@ -151,16 +150,16 @@ $(document).ready(function(){
           </div>
           <div class="row">
             <div class="col-lg-3 col-xs-6">
-              <div class="small-box bg-red">
+              <div class="small-box bg-yellow">
                 <div class="inner">
-                  <h3>{{App\Models\Report::all()->where('jenis',1)->where('status','2')->count()}}</h3>
-                  <p>Laporan sudah ditolak</p>
+                  <h3>{{App\Models\Report::all()->where('jenis',1)->where('status','1')->count()}}</h3>
+                  <p>Laporan menunggu verifikasi</p>
                 </div>
                 <div class="icon">
                   <i class="fa fa-archive">
                   </i>
                 </div>
-                     <a href="/report/reportverification" class="small-box-footer">Lihat Laporan <i class="fa fa-arrow-circle-right">
+                     <a href="/report/reportrejected" class="small-box-footer">Lihat Laporan <i class="fa fa-arrow-circle-right">
                      </i>
                     </a>
               </div>
@@ -175,22 +174,22 @@ $(document).ready(function(){
                   <i class="fa fa-archive">
                   </i>
                 </div>
-                     <a href="/report/bulan" class="small-box-footer">Lihat Laporan <i class="fa fa-arrow-circle-right">
+                     <a href="/report/diterima" class="small-box-footer">Lihat Laporan <i class="fa fa-arrow-circle-right">
                      </i>
                     </a>
               </div>
             </div>
             <div class="col-lg-3 col-xs-6">
-              <div class="small-box bg-blue">
+              <div class="small-box bg-red">
                 <div class="inner">
-                <h3>{{App\Models\Report::all()->where('jenis',1)->where('status','1')->count()}}</h3>
+                <h3>{{App\Models\Report::all()->where('jenis',1)->where('status','2')->count()}}</h3>
                 
-                  <p>Laporan menunggu verifikasi</p>
+                  <p>Laporan ditolak</p>
                 </div>
                 <div class="icon"><i class="fa fa-archive">
                 </i>
               </div>
-                     <a href="/report/reportrejected" class="small-box-footer">Lihat Laporan <i class="fa fa-arrow-circle-right">
+                     <a href="/report/reportverification" class="small-box-footer">Lihat Laporan <i class="fa fa-arrow-circle-right">
                      </i>
                     </a>
               </div>

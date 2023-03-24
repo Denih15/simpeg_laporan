@@ -1,8 +1,21 @@
 @extends('layouts.app') @section('content')
 
 <section class="content-header">
-            <h1> Laporan  Kinerja Harian Menunggu verifikasi </h1>
-
+            <h1> Laporan Kinerja Harian Sudah Terverifikasi </h1>
+            <!-- <table width="100%" id="head_rpt">
+                <tbody>
+                    <tr>
+                        <th width="100" style="text-align:left" valign="top">INSTANSI</th>
+                        <th width="10">:</th>
+                        <td valign="top">SMAN 1 MENTHOBI RAYA</td>
+                    </tr>
+                    <tr>
+                        <th style="text-align:left">BULAN</th>
+                        <th>:</th>
+                        <td>Maret 2023</td>
+                    </tr>
+                </tbody>
+            </table>  -->
         <html lang="en" class="">
             <head>
                 <meta name="robots" content="noindex, nofollow" />
@@ -256,11 +269,26 @@
                                     selesai
                                 </div>
                             </th>
+                            <th
+                                nowrap=""
+                                data-column="7"
+                                class="tablesorter-header tablesorter-headerUnSorted"
+                                tabindex="0"
+                                scope="col"
+                                role="columnheader"
+                                aria-disabled="false"
+                                aria-controls="data-table"
+                                unselectable="on"
+                                aria-sort="none"
+                                aria-label="Comments: No sort applied, activate to apply an ascending sort"
+                                style="user-select: none"
+                            >
                          
+                                <div class="tablesorter-header-inner">aksi</div>
+                            </th>
                         </tr>
                     </thead>
                     <tbody aria-live="polite" aria-relevant="all">
-
                     @php
             $no = 1;
             @endphp
@@ -273,16 +301,41 @@
                             <td>{{$laporan->kegiatan_tugas_jabatan}}</td>
                             <td>{{$laporan->mulai}}</td>
                             <td>{{$laporan->selesai}}</td>
-                          
+                            <td>
+                            <span class="badge text-bg-warning">
+                                @csrf
+                        <a href="/edit/{{$laporan->id}}"method="post" style="text-decoration: none; color:black" class="btn btn-primary" >Edit</a>
+                    </span>
+                    <span class="badge text-bg-warnin">
+                             
+                                <form action="/delete/{{$laporan->id}}" method="post">
+                        @csrf
+                        <button type="submit"  class="btn btn-danger">
+                            Delete
+                        </button>
+                        </form>
+                    </span>
+
+
+                            </td>
                         </tr>  
                         @php
             $no++;
             @endphp
-             @endforeach     
-                        </tbody>
-        </table>
+
+                        @endforeach
+                    </tbody>
+                </table>
+                <div class="col-md-6">
+    <a href="/home" class="btn btn-danger btn-md btn-form-cancel d-noprint" type="button">Back</a>
+	</div>
+            </body>
+        </html>
+    </div>
+</div>
 
 <div class="col-md-6">
     <a href="/home" class="btn btn-danger btn-md btn-form-cancel d-noprint" type="button">Back</a>
 	</div>
+
 @endsection

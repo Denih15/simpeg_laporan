@@ -1,38 +1,56 @@
 
-<li class="nav-item menu-open">
-    <a href="/home" class="nav-link ">
+
+    <!-- <a href="/home" class="nav-link ">
       <i class="nav-icon fas fa-tachometer-alt"></i>
       <p>
         Dashboard
         <i class="right fas fa-angle-left"></i>
       </p>
-    </a>
-    <ul class="nav nav-treeview">
+    </a> -->
+    <ul class="nav item">
       <li class="nav-item">
         <a href="/home" class="nav-link ">
-          <i class="far fa-circle nav-icon"></i>
-          <p>Menu</p>
+          <i class="fa fa-home"></i>
+          <p>Beranda</p>
         </a>
       </li>
+      <li class="nav-item menu-open">
+        <a href="" class="nav-link ">
+          <i class="fa fa-circle nav-o"></i>
+          <p>
+            Pengaturan
+            <i class="right fas fa-angle-left"></i>
+          </p>
+        </a>
+        <ul class="nav nav-treeview">
+          <li class="nav-item">
+            <a href="/report/pengaturan" class="nav-link ">
+              <i class="far fa-circle nav-icon"></i>
+              <p>set atasan</p>
+            </a>
+          </li>
+
+
+      <!-- <li class="nav-item menu-open"></li>
       <li class="nav-item">
-        <a href="/report/pengaturan" class="nav-link ">
+        <a href="/report/" class="nav-link ">
           <i class="far fa-circle nav-icon"></i>
           <p>Pengaturan</p>
         </a>
-      </li>
-      <li class="nav-item">
+      </li> -->
+      <!-- <li class="nav-item">
         <a href="/report/tk" class="nav-link">
           <i class="far fa-circle nav-icon"></i>
           <p>Target Kinerja</p>
         </a>
-      </li>
+      </li> -->
     </ul>
   </li>
   <li class="nav-item ">
     <a href="/report/reportverified" class="nav-link  ">
       <i class="nav-icon fas fa-edit"></i>
       <p>
-        laporan harian
+        laporan 
         <i class=""></i>
       </p>
     </a>

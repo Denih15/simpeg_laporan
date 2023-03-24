@@ -43,7 +43,7 @@
                 <tr>
                     <th style="text-align:left">NIP</th>
                     <th width="10">:</th>
-                    <td>196802211995121003</td>
+                    <td>197310212001242003</td>
                     </tr>
                     <tr>
                         <th style="text-align:left">PD</th>
@@ -60,7 +60,7 @@
                             <table class="table table-striped table-bordered table-condensed"><tbody>
                                 <tr>
                                     <th>No</th>
-                                    <th>HARI/ TANGGAL</th>
+                                    <th>TANGGAL</th>
                                     <th>WKE</th>
                                     </tr>
                                     @php
@@ -97,7 +97,7 @@
                                                                             
                                                                             </tr>
                                                                             <tr>
-                                                                                <td colspan="4">Waktu kerja efektif minimal / bulan = 117 jam      </td>
+                                                                                <td colspan="4">Waktu kerja efektif minimal / bulan = 90 jam      </td>
                                                                              
                                                                                 </tr>
                                                                                 </tbody>

@@ -78,11 +78,11 @@ class ReportController extends Controller
         'kegiatan_tugas_jabatan' => $request->kegiatan,
         'mulai' => $request->mulai,
         'selesai' => $request->selesai,
-        'status' => 1,
+        'status' => 1
 
     ]);
     // return $this->getAllEvents();
-    return redirect('/report/bulan')->with('success','laporan ditambahkan!');
+    return redirect('/report/reportrejected')->with('success','laporan ditambahkan!');
    }
    public function reportverification()
  {
@@ -96,6 +96,11 @@ class ReportController extends Controller
          $laporans = Report::all()->where('status',1);
          return view('report.reportrejected',compact('laporans'));
      }
+     public function diterima()
+     {
+           $laporans = Report::all()->where('status',3);
+           return view('report.diterima',compact('laporans'));
+       }
     
      public function reportverified()
    {
@@ -153,25 +158,26 @@ class ReportController extends Controller
                 // dd($request->all());
                 $laporans = Report::find($id);
                 $laporans->nama = $request->nama;
-                $laporans->employee_id = $request->id;
+             
                 $laporans->tanggal = $request->kapan;
                 $laporans->jenis = $request->jenis;
                 $laporans->kegiatan_tugas_jabatan = $request->kegiatan;
                 $laporans->mulai = $request->mulai;
                 $laporans->selesai = $request->selesai;
+                
+
         
                 $laporans->save();
         
-                return redirect('report/bulan')->with('success','Laporan Sudah diupdate!');
+                return redirect('report/diterima')->with('success','Laporan Sudah diupdate!');
         
             }
            
             public function delete($id){
                 $laporan = report::find($id);
-                $laporan->status = 2;
-                $laporan->save();
+                $laporan->delete();
         
-                return redirect('report/bulan')->with('success','Laporan Sudah dihapus!');
+                return redirect('report/diterima')->with('success','Laporan Sudah dihapus!');
             }
 
             public function setuju($id){
@@ -179,13 +185,13 @@ class ReportController extends Controller
                 $laporans = Report::find($id);
                 $laporans->status = 3;
                 $laporans->save();
-                return view('report.reportverification',compact('laporans'));
+                return view('report.bulan',compact('laporans'));
             }
             public function tolak($id){
 
                 $laporans = Report::find($id);
                 $laporans->status = 2;
                 $laporans->save();
-                return view('report.reportrejected',compact('laporans'));
+                return view('report.reportverification',compact('laporans'));
             }
  }

@@ -33,6 +33,7 @@ Route::get('/report/create',[DeveloperController::class,'create']);
 Route::post('/report/store',[ReportController::class,'store']);
 Route::get('/report/reportverification',[ReportController::class,'reportverification']);
 Route::get('/report/reportrejected',[ReportController::class,'reportrejected']);
+Route::get('/report/diterima',[ReportController::class,'diterima']);
 Route::get('/report/reportverified',[ReportController::class,'reportverified']);
 Route::get('/report/bulan',[ReportController::class,'bulan']);
 Route::get('/report/wke',[ReportController::class,'wke']);
@@ -40,12 +41,12 @@ Route::post('/report/pengaturan',[ReportController::class,'pengaturan']);
 Route::get('/report/pengaturan',[ReportController::class,'pengaturan']);
 Route::get('/report/tk',[ReportController::class,'tk']);
 Route::post('/addReport',[ReportController::class,'tambahLaporan'])->name('addReport');
-
+Route::post('/report/bulan',[ReportController::class,'bulan']);
 Route::get('edit/{id}',[ReportController::class,'update']);
 Route::post('save_update_report/{id}',[ReportController::class,'save_update']);
-
 
 Route::post('delete/{id}',[ReportController::class,'delete']);
 
 Route::get('setuju/{id}',[ReportController::class,'setuju']);
 Route::get('tolak/{id}',[ReportController::class,'tolak']);
+Route::post('tolak/{id}',[ReportController::class,'tolak']);

@@ -32,7 +32,7 @@
                                             <tr>
                                                 <td>NIP</td>
                                                 <td>:</td>
-                                                <td>089977354343445</td>
+                                                <td>197310212001242003</td>
                                             </tr>
                                             <tr>
                                                 <td style="vertical-align: top;">Jabatan</td>
